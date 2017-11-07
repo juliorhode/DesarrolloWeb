@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+        <script>
+            /*
+                FORMA TRADICIONAL CON JAVASCRIPT
+                ********************************
+                var imagenes = document.querySelectorAll("#carrete img");
+
+                for( var i = 0; i < imagenes.length; i++){
+                    imagenes[i].style.visibility = "hidden";
+                }
+
+
+            */
+            
+            $(document).ready(function(){
+                $("#carrete img").hide();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="header">
+                <p class="logo"> Curso JavaScript</p>
+            </div>
+            <div class="contenido">
+                <div class="principal">
+                    <h1>Jugando con JQuery</h1>
+                    <div id="carrete">
+                        <img src="Imagenes\margarita.jpg" width="300" height="200">
+                        &nbsp;
+                        <img src="Imagenes\tulipan.jpg" width="300" height="200">
+                        &nbsp;
+                        <img src="Imagenes\flores.jpg" width="300" height="200">
+                    </div>                    
+                </div>
+            </div>
+        </div>   
+
+        <script>
+            /*
+            permite seleccionar los elementos de una pagina por medio de un selector CSS
+            
+                aqui indicamos que seleccione todos los elementos img
+                que se encuentran dentro del contenedor carrete
+
+                Ahora bien, como selecciona todo esos elementos y los va 
+                a almacenar en la variable imagenes, esto es almacenado como
+                un Array (querySelectorAll la convierte automaticamente en una 
+                variable de tipo Array)
+            
+            FORMA TRADICIONAL CON JAVASCRIPT
+            ********************************
+            var imagenes = document.querySelectorAll("#carrete img");
+
+            for( var i = 0; i < imagenes.length; i++){
+                imagenes[i].style.visibility = "hidden";
+            }
+
+            */
+
+        </script>
+    
+    </body>
+</html>

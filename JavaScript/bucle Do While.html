@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <table width="25%" border="0">
+            <tr>
+                <td>
+                    <label for="mensaje"></label>
+                    <input type="text" name="mensaje" id="c_mensaje">
+                </td>
+                <td>
+                    <label for="intentos"></label>
+                    <input type="text" name="intentos" id="c_intentos">
+                </td>
+            </tr>
+        </table>
+        <script>
+                /*
+                    Math.random() genera un numero aleatorio entre 0 y 1
+                    por ende, el numero es como 0,223567686..... para ello lo 
+                    multiplicamos por 100 para mover la coma a la derecha dos
+                    espacios
+    
+                    Para numero enteros, necesitamos el metodo round() 
+                */
+                var aleatorio = Math.round( Math.random() * 100 );
+                var numero, intentos;
+    
+                numero = 0;
+                intentos = 0;
+
+                var mensaje = document.getElementById("c_mensaje");
+                var numintentos = document.getElementById("c_intentos");
+
+                do{
+                    numero = prompt("Introduce un numero entre 0 y 100");
+                    if(aleatorio > numero){
+                        mensaje.value = "Mas alto";
+                        mensaje.style.fontSize="14px";
+                    }else if(aleatorio<numero){
+                        mensaje.value = "Mas bajo";
+                        mensaje.style.fontSize="14px";
+                    }
+                    intentos ++;
+                    numintentos.value = intentos;
+                    numintentos.style.fontSize="14px";
+                    numintentos.style.color="red";
+                    numintentos.style.textAlign="center";
+                }while( aleatorio != numero);
+                mensaje.value="Correcto!!!";
+                mensaje.style.fontSize="14px";
+                mensaje.style.color="blue";
+                
+            </script>
+    </body>
+</html>

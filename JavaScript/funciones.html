@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .centrado{
+                text-align: center;
+            }
+  
+        </style>
+
+        <script>
+
+            function dia_hoy(){
+                var hoy = new Date();
+                document.write(hoy.getDate() + "/" + hoy.getMonth() + "/" + hoy.getFullYear());
+            }
+        </script>
+
+    </head>
+    <body>
+    <h1 class="centrado"><strong>Que dia es hoy???</strong></h1>
+    <p>Hoy es: <script>dia_hoy();</script></p>
+    </body>
+</html>

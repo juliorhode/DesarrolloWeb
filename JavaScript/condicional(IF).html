@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script>
+            var precioCoche = 60000;
+            var dineroAhorrado = prompt("Introduce cuanto dinero tienes ahorrado");
+            var edad = prompt("Introduce tu edad");
+            var loteria = prompt("Te ha tocado la loteria??");
+
+            if (dineroAhorrado >= precioCoche && edad >= 18 || loteria == "si"){
+                alert("Puedes comprar el coche");
+                document.write("<body>");
+                document.write("<h1>"+ "Felicidades!!!" +"</h1></body>" );
+            }else{
+                alert("No puedes comprar el coche");
+                document.write("<body>");
+                document.write("<h1>"+ "Suerte para la proxima!!!" +"</h1></body>" );
+            }
+
+        </script>
+    
+    </head>
+    <body>
+
+    <!--
+        OPERADORES COMPARACION
+        ***********************
+        ==  Igual que
+        !=  Diferente que
+        >   Mayor que
+        <   Menor que
+        >=  Mayor o igual que
+        <=  Menor o igual que
+        === Estrictamente igual que (comprueba sea o no del mismo tipo)
+        !== Estrictamente diferente que (comprueba sea o no del mismo tipo)
+
+        OPERADORES LOGICOS
+        ******************
+        && Y logico
+        || O logico
+    -->
+    </body>
+</html>

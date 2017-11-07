@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    
+        <script>
+            //El flujo de ejecucion es de arriba hacia abajo
+            
+            var precio, cantidad, total;
+            var camisetas = "5";// hay que tener cuidado porque el  valor entre "" lo toma como un string
+            var pantalones = 5;
+            /*aqui nos puede jugar una mala jugada, al sumar los productos,
+            que en vez de indicarnos que hay 10, lo va a juntar y va a decir que son
+            55
+            Para este caso, o se quitan las "" del valor de la camisetas, o se usa
+            la funcion Number(); --> esta funcion trasnforma lo que pueda del string
+            a numero, sino, dara como resultado isNam que significa que no es un numero
+            */
+            total = Number(camisetas) + pantalones;
+            alert(total);
+
+            precio = 5;
+            cantidad = 100;
+            total = precio * cantidad;
+            alert("El importe total de la compra es: " + total + " Bs.");
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

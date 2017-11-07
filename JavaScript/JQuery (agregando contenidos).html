@@ -1,0 +1,78 @@
+<!--
+    .html() = refleja o reemplaza el texto que se encuentra en la pagina
+    .text() = sustituye texto por otro igual que .html pero no es capaz de manipular etiquetas
+    .after() = agrega el contenido a continuacion del anterior (luego del contenedor)
+    .append() = agrega el contenido a continuacion del anterior (mismo contenedor)
+    .prepend() = agrega el contenido al principio (mismo contenedor)
+    .before() = agrega el contenido al principio (antes del contenedor)
+-->
+  <!doctype html>
+  <html lang="">
+      <head> 
+          <meta charset="UTF-8">
+          <title>Jugando con las variables</title>
+          <link rel="stylesheet" href="estilo.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+          <script>
+              $(document).ready(function(){
+                /* 
+                FUNCION .HTML()
+                ***************
+
+                muestra el texto:
+                alert($("#errores").html()); --> Esto aparecera en el alert: <h2>Errores</h2> 
+                alert($("#errores h2").html()); --> Esto aparecera en el alert: Errores 
+                COMO NOS ADENTRAMOS DENTRO DE LAS H2, SALE SOLO EL CONTENIDO
+
+                Sustituye el texto
+                $("#errores").html("<p> Sin Errores </p>");
+
+                //FUNCION .APPEND()
+                
+                NOTA CON ETIQUETA H2:
+                *********************
+                    las etiquetas h2 son de tipo blocklevel,
+                    esto quiere decir que viene acompañada 
+                    implicitamente con un salto de linea
+
+                AGREGAMOS CONTENIDO A CONTINUACION(MISMO CONTENEDOR)
+                $("#errores").append("<h3> Hay errores por ver </h3>");
+
+                AGRAGAMOS CONTENIDO AL INICIO(MISMO CONTENEDOR)
+                $("#errores").prepend("<h3> Hay errores por ver </h3>");
+
+                AGREGAMOS CONTENIDO A CONTINUACION(FUERA DEL CONTENEDOR)
+                $("#errores").after("<h3> Hay errores por ver </h3>");
+
+                AGRAGAMOS CONTENIDO AL INICIO(MISMO CONTENEDOR)
+                $("#errores").before("<h3> Hay errores por ver </h3>");
+
+                SUSTITUIMOS TEXTO POR OTRO SIN 
+                $("#errores h3").text("Hay errores por verificar");
+                */
+                alert($("#errores").html());
+                alert($("#errores h2").html());
+                $("#errores").html("<h2> Muchos Errores </h2>");
+                $("#errores").append("<h3> Hay errores por ver </h3>");
+               
+                $("#errores h3").text("Hay errores por verificar");
+              });
+          </script>
+      </head>
+      <body>
+          <div class="contenedor">
+              <div class="header">
+                  <p class="logo"> Curso JavaScript</p>
+              </div>
+              <div class="contenido">
+                  <div class="principal">
+                      <h1>Jugando con JQuery</h1>
+                      <div id="errores" class="micontenedor">
+                          <h2>Errores</h2> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </body>
+  </html>

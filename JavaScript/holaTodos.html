@@ -1,0 +1,30 @@
+<!doctype html>
+    <html>
+        <head> 
+            <meta charset="UTF-8">
+            <title>Hola a todos</title>
+            <link rel="stylesheet" href="holaTodos.css">
+            <!-- Este archivo js sirve para todas las html que la 
+                tienen enlazada-->
+            <script src="holaTodos.js"></script>
+            <script src="Recursos/jquery-3.2.1.min.js"></script>
+
+            <!-- Este script es solo para esta pagina-->
+            <script>
+                
+                //alert("Adios a todos");
+                
+                $(function(){
+                    //esto va a actuar en el body
+                    //hide es para ocultar
+                    //fadeIn es para desvanecer en 3seg
+                    $("body").hide().fadeIn(3000);
+                    //en pocas palabras, aparecera todo poco a poco
+                });
+            </script>
+        </head>
+        <body>
+            <p>Bienvenidos al curso de <span>javascript</span></p>
+             <img src="Imagenes/flores.jpg" width="300">
+        </body>
+    </html>

@@ -1,0 +1,134 @@
+<!--
+ Sentencias
+ **********
+ Son todas las frases que terminan en ;
+
+ Funciones Predefinidas
+ ***********************
+ Son las que vienen predefinidas dentro del archivo javascrip o las 
+ creadas por nosotros
+
+ alert();
+ document.write();
+ isNam();
+
+ Tipos de datos
+ **************
+  Numerico: decimales y enteros
+  String: "texto" o 'texto'
+  Booleans: true o false
+ 
+ Variables
+ *********
+ Son espacios en la memoria del ordenador (RAM) donde se almacenara el 
+ valor
+
+  var <nombre variable>;
+
+ Reglas
+ ******
+  Han de comenzar por letra, simbolo $ o _
+  Han de contener solo letras, numeros, $ y _
+  Son case sensitive
+  No deben ser palabras reservadas
+  Se recomienda que sean descriptivos
+  Se deben iniciar las variables
+ 
+  Ejemplo:
+ 
+  var puntuacion = 0;
+  var puntuacion1 = 0;
+  var puntuacion_1 = 0;
+  var puntuacion$_1 = 0;
+  var $puntuacion = 0;
+  var _puntuacion = 0;
+  var nombre = "nombre";
+
+  var puntuacion = 0, record = 500, jugador = "julio";
+
+  Operadores Basicos
+  ******************
+  + suma y para concatenar(unir)
+  - resta
+  * multiplicacion
+  / division
+
+  Operadores de incremento o decremento
+  *************************************
+  += incrementa en X el valor de la variable
+  -= decrementa en X el valor de la variable
+  *= multiplica en X el valor de la variable
+  /= divide en X el valor de la variable
+  ++ incrementa en 1 el valor de la variable
+  -- decrementa en 1 el valor de la variable
+
+  Si se encuentra una variable con un contenido de un string y queremos
+  concatenar con un valor numerico, los va a unir mas no los va a sumar.
+  Pero se puede usar la funcion Numbre();
+  
+  Comentarios
+  ***********
+  // en una sola linea
+  /* */ comentarios en varias lineas
+
+  Ejemplo:
+  //comentario
+
+  /*
+  hola
+  como 
+  estas
+  */
+
+  -->
+<!doctype html>
+    <html lang="">
+        <head> 
+            <meta charset="UTF-8">
+            <title>Jugando con las variables</title>
+            <link rel="stylesheet" href="estilo.css">
+            <script>
+                //var nombre = "Julio";
+                var puntuacion = 5;
+                var total;
+                var subTotal = "5"
+                var record;
+                record = 500;
+                total = (record * puntuacion) + Number(subTotal) ;
+                //alert("El total es: " + total);
+
+                var nombre = "";
+                var apellido = "";
+                var edad = 0;
+
+                //prompt es para entrada de datos
+                nombre = prompt("Ingresa tu nombre:");
+                apellido = prompt("Ingresa tu apellido:");
+                edad = prompt("Introduce tu edad");
+                
+            </script>
+        </head>
+        <body>
+
+            <div class="contenedor">
+                <div class="header">
+                    <p class="logo"> Curso JavaScript</p>
+                </div>
+                <div class="contenido">
+                    <div class="principal">
+                        <h1>Jugando con las variables</h1>
+
+                        <script>
+                            //Mostramos la info en la pagina
+                            document.write("<p>");
+                            document.write("Bienvenido/a " + nombre + " " + apellido +
+                            "<br>" + "Edad: " + edad);
+                            document.write("</p>");
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+        </body>
+    </html>

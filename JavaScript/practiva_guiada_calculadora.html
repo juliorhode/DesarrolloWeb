@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .numero{
+                width: 30px;
+                height: 30px;
+                border-bottom-style: solid;
+                background-color: #C5C2C2;
+                color: #003091;
+            }
+
+            table{
+                margin: auto;
+            }
+
+            .color_display{
+                height: 30px;
+                background-color: #EBE6E6;
+                border: medium;
+                font-size: 14px;
+                padding: 5px;
+            }
+        </style>
+        <script>
+            var cifra = "";
+            var p_operacion = true;
+            var acumulado = 0;
+            var sumar = false;
+            var restar = false;
+            var multiplicar = false;
+            var dividir = false;
+            function display_numeros(numero){
+                document.getElementById("display").value = cifra + numero;
+                cifra = document.getElementById("display").value;
+            }
+            function suma(){
+                if(restar){
+                    acumulado = parseInt(acumulado) - parseInt(cifra);
+                    document.getElementById("display").value = acumulado;
+                }else{
+                    acumulado = parseInt(acumulado) + parseInt(cifra);
+                    document.getElementById("display").value = acumulado;
+                }
+                cifra="";
+                sumar = true;
+                restar = false;
+                p_operacion = false;
+            }
+            function resta(){
+                if(p_operacion == false){
+                    if (sumar){
+                        acumulado = parseInt(acumulado) + parseInt(cifra);
+                        document.getElementById("display").value = acumulado;
+                    }else{
+                        acumulado = parseInt(acumulado) - parseInt(cifra);
+                        document.getElementById("display").value = acumulado;
+                    }
+                }else{
+                    acumulado = parseInt(acumulado) + parseInt(cifra);
+                    p_operacion = false;
+                }
+                
+                cifra="";
+                sumar=false;
+                restar = true;
+            }
+            function multiplica(){
+                
+            }
+            function divide(){
+                
+            }
+            function resultado(){
+                if(sumar == true){
+                    document.getElementById("display").value = acumulado + parseInt(document.getElementById("display").value) ;
+                }else if(restar == true){
+                    document.getElementById("display").value = acumulado - parseInt(document.getElementById("display").value) ;
+                }else if(multiplicar == true){
+                    document.getElementById("display").value = acumulado * parseInt(document.getElementById("display").value) ;
+                }else if(dividir == true){
+                    document.getElementById("display").value = acumulado / parseInt(document.getElementById("display").value) ;
+                }
+                acumulado = parseInt(document.getElementById("display").value);
+                cifra = 0;
+            }
+        </script>
+    </head>
+    <body>
+    
+        <table width="15%" border="1">
+            <tr>
+                <td colspan="4" align="center" class="color_display">
+                    <input type="text" name="display" id="display" style="text-align: right" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%"><input type="button" class="numero" value="7" id="7" onclick="display_numeros(7)"></td>
+                <td width="20%"><input type="button" class="numero" value="8" id="8" onclick="display_numeros(8)"></td>
+                <td width="20%"><input type="button" class="numero" value="9" id="9" onclick="display_numeros(9)"></td>
+                <td width="20%"><input type="button" class="numero" value="+" id="+" onclick="suma()"></td>
+            </tr>
+            <tr>
+                <td width="20%"><input type="button" class="numero" value="4" id="4" onclick="display_numeros(4)"></td>
+                <td width="20%"><input type="button" class="numero" value="5" id="5" onclick="display_numeros(5)"></td>
+                <td width="20%"><input type="button" class="numero" value="6" id="6" onclick="display_numeros(6)"></td>
+                <td width="20%"><input type="button" class="numero" value="-" id="-" onclick="resta()"></td>
+            </tr>
+            <tr>
+                <td width="20%"><input type="button" class="numero" value="1" id="1" onclick="display_numeros(1)"></td>
+                <td width="20%"><input type="button" class="numero" value="2" id="2" onclick="display_numeros(2)"></td>
+                <td width="20%"><input type="button" class="numero" value="3" id="3" onclick="display_numeros(3)"></td>
+                <td width="20%"><input type="button" class="numero" value="*" id="*" onclick="multiplica()"></td>
+            </tr>
+            <tr>
+                <td width="20%" ><input type="button" class="numero" value="," id=","></td>
+                <td width="20%"><input type="button" class="numero" value="0" id="0" onclick="display_numeros(0)"></td>
+                <td width="20%"><input type="button" class="numero" value="=" id="=" onclick="resultado()"></td>
+                <td width="20%"><input type="button" class="numero" value="/" id="/" onclick="divide()"></td>
+            </tr>
+        </table>
+    </body>
+</html>

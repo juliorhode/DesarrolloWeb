@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="estilo.css">
+
+        <script>
+            var nombre= prompt("Introduce tu nombre");
+            var apellido= prompt("Introduce tu apellido");
+            var edad = prompt("Introduce tu edad");
+            var restando = prompt("Cuantos años deseas quitarte?");
+            //decrementamos la edad con el valor de restando
+            edad -= restando;
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="header">
+                <p class="logo">Curso JavaScript</p>
+            </div>
+            <div class="contenido">
+                <div class="principal">
+                    <h1>Jugando con las variables</h1>
+                    <script>
+
+                        /*
+                            prompt() -->Entrada de datos
+                            alert() --> salida de datos en forma de ventana
+                        */
+        
+                        //var nombre="Julio";
+                        //var apellido="Ferrer";
+        
+                        //var nombre= prompt("Introduce tu nombre");
+                        //var apellido= prompt("Introduce tu apellido");                        
+        
+                        //Para esto se consigue abrir un parrafo en esa zona
+                        document.write("<p>");
+                        // <br/> --> hacemos un salto de linea
+                        document.write("Bienvenido/a " + nombre + " " + apellido + 
+                        "<br/>" + "Te gustaria tener " + edad + " años");
+                        document.write("</p>");
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

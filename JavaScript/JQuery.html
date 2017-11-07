@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilo.css">
+        
+        <!-- 
+            esta libreria es lo primero que lee
+        -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+        <script>
+            /*
+                este bloque es poner a la espera nuestro 
+                codigo jquery a que cargue la pagina primero
+
+                esto va luego del codigo CSS dado que por 
+                lo general, desde el codigo javascript se 
+                este accediendo a codigo CSS
+
+                DOM --> document object model
+
+                El navegador recuerda las etiquetas html, sus atributos y el orden en el cual aparecen
+                en el archivo... esta representacion es el DOM 
+                 
+                Las etiquetas se manejan como nodos.
+
+                ejemplo del uso del objeto JQuery $("<selector>"):
+
+                por la clase:
+                <p class="logo"> Curso JavaScript</p> --> $(".logo")
+
+                por el id (unico elemento):
+                <img src="Imagenes\margarita.jpg" id="imagen" width="35%"> --> $("#imagen")
+
+                por le tagName (todos los elemento):
+                <p> Curso JavaScript</p> --> $("p")
+
+
+                document.getElementById() --> $("#<elemento>")
+                document.getElementByTagName() --> $("<elemento>")
+
+                otro ejemplo:
+
+                var mensaje = document.getElementById("mensaje").value;
+                esto equivale a JQuery:
+                var mensaje = $("#mensaje").value;
+
+                
+
+            */
+            $(document).ready(function(){
+                //aqui va el codigo javascript
+
+                $("body").hide().fadeIn(5000);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="header">
+                <p class="logo"> Curso JavaScript</p>
+            </div>
+            <div class="contenido">
+                <div class="principal">
+                    <h1>Jugando con JQuery</h1>
+                    <img src="Imagenes\margarita.jpg" width="35%">
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!--
+PLANTILLA HTML PARA EL CURSO
+
+addClass() = agrega un estilo de clase
+toggleClass() = Es la union de las otras dos... dota a un elemento de un estilo cuando esta en on o en off
+removeClass() = quita un estilo de clase
+  -->
+  <!doctype html>
+  <html lang="">
+      <head> 
+          <meta charset="UTF-8">
+          <title></title>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+          <style>
+              .linkdestacacursos{
+                  background-color: #f00;
+              }
+              a{
+                  display: block;
+                  margin-bottom: 10px;
+                  font-size: 24px;
+              }
+              table{
+                  text-align: center;
+                  border: none;
+              }
+              td{
+                  border: none;
+              }
+              #contieneEnlaces{
+                  position: absolute;
+                  left: 31px;
+                  top: 65px;
+                  width: 400px;
+                  height: 649px;
+                  z-index: 1;
+                  padding-top: 100px;
+              }
+          </style>
+      </head>
+      <body>
+          <div id="contieneEnlaces">
+                <a href="JQuery (remplazar y eliminar elementos).html" target="blank" class="cursos">
+                        Remover y Remplazar
+                </a><br>
+                <a href="https:www.google.com" target="blank" >
+                        Google
+                </a><br>
+                <a href="https://www.youtube.com" target="blank" class="ejemplos">
+                        Youtube
+                </a><br>
+                <a href="JQuery (loops automaticos).html" target="blank" class="cursos">
+                        JQuery
+                </a>  <br>            
+              <a href="practiva_guiada_calculadora.html" target="blank" class="ejemplos">
+                  Calculadora
+              </a><br>
+          </div>
+        <table width="100%" border="1">
+            <tr>
+                <td>Cursos destacados &nbsp;&nbsp;<input type="button" value="Cursos" id="cursos"></td>
+                <td>Informacion adicional &nbsp;&nbsp;<input type="button" value="Informacion" id="informacion"></td>                
+            </tr>
+        </table> 
+      </body>
+  </html>

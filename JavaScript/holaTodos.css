@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(192, 192, 192);
+}
+h1{
+    color: #0A0188;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    text-align: center;
+}
+p{
+    color: #0A0188;
+    font-size: 2em;
+
+}
+p span{
+    font-size: 2em;
+}

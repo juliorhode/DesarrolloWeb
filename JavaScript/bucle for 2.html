@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script>
+            var trabajadores = new Array();
+            var persona="";
+            var contador=0;
+
+            while(persona != "salir"){
+                persona = prompt("Introduce trabajador");
+                trabajadores[contador] = persona;
+                contador ++;
+            }
+
+            trabajadores.pop();//borramos el ultimo registro
+            for(var i=0; i<trabajadores.length; i++){
+                document.write(trabajadores[i] + "<br/>");
+            }
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

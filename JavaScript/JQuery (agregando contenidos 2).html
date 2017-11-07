@@ -1,0 +1,34 @@
+<!--
+PLANTILLA HTML PARA EL CURSO
+  -->
+  <!doctype html>
+  <html lang="">
+      <head> 
+          <meta charset="UTF-8">
+          <title>Jugando con las variables</title>
+          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+          <script>
+              
+                
+                function validar(){
+                  var n_usuario = document.getElementById("usuario").value;
+                  if(n_usuario == ""){
+                      $("#usuario").after("Rellena este campo por favor");
+                  }
+                }
+
+              
+              
+          </script>        
+      </head>
+      <body>
+          <form action="" method="get">
+                <input type="text" name="" id="usuario"><br>
+                <input type="text" name="" id="nombre"><br>
+                <input type="text" name="" id="apellido"><br><br>
+                <input type="submit" value="Enviar" onclick="validar()">
+            </form>
+      </body>
+  </html>

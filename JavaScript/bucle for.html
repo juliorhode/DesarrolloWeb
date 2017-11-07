@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script>
+            document.write("Incremento" + "<br/>");
+            for(var i = 0; i < 10 ; i ++ ){
+                document.write( i  + ") hola" + "<br/>");
+            }
+
+            document.write("<br/>");
+
+            document.write("Decremento" + "<br/>");
+            for(var i = 9; i >= 0 ; i -- ){
+                document.write( i  + ") hola" + "<br/>");
+            }
+
+            document.write("<br/>");
+
+            document.write("Crear objeto" + "<br/>");
+            for(var i = 5; i > 0 ; i -- ){
+                //Investigar como colocar el valor de i al input
+                document.write("<input type='text'><br/>");
+                document.write("<br/>");
+            }
+
+            var meses = new Array("Enero","Febrero", "Marzo",
+            "Abril","Mayo","Junio","Julio","Agosto","Septiembre",
+            "Octubre","Noviembre","Diciembre");
+            
+            document.write("Lectura del Array" + "<br/>");
+            for(var j = 0; j < meses.length ; j ++ ){
+                
+                document.write( (j + 1) + ") " + meses[j] );
+                document.write("<br/>");
+            }
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

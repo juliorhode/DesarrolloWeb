@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script>
+            var repetir="si";
+            
+            function suma(num1, num2){
+                alert("La suma es: " + (num1 + num2));
+            }
+            function resta(num1, num2){
+                alert("La resta es: " + (num1 - num2));
+            }
+            function multiplicar(num1, num2){
+                alert("La multiplicacion es: " + (num1 * num2));
+            }
+            function dividir(num1, num2){
+                alert("La division es: " + (num1 / num2));
+            }
+
+
+            do{
+                var operacion = prompt("Operacion a realizar");
+                var  numero1 = parseInt(prompt("Introduce el primer numero"));
+                var numero2 = parseInt(prompt("Introduce el segundo numero"));
+
+                if(operacion == "+"){
+                    suma(numero1,numero2);
+                }else if(operacion == "-"){
+                    resta(numero1,numero2);
+
+                }else if(operacion == "*"){
+                    multiplicar(numero1,numero2);
+
+                }else if(operacion == "/"){
+                    dividir(numero1,numero2);
+
+                }
+                repetir = prompt("Desea repetir");
+
+            }while(repetir=="si");
+                
+            
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

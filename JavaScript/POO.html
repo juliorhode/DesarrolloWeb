@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <!--
+        objeto.propiedad = "valor";
+        objeto.metodo();
+    -->
+
+    <input type="button" id="boton1">
+    <input type="button" id="boton2">
+    <input type="text" id="cuadro">
+    <script>
+        var miBoton = document.getElementById("boton1");
+        var miBoton2 = document.getElementById("boton2");
+        var miCuadro = document.getElementById("cuadro");
+        
+        //Acceso a las propiedades
+        miBoton.style.width  = "80px";
+        miBoton.style.height = "80px";
+        //miBoton.style.background = "blue";
+
+        miBoton2.style.width  = "80px";
+        miBoton2.style.height = "80px";
+        
+
+        miCuadro.style.width  = "280px";
+        miCuadro.style.height = "20px";
+        miCuadro.style.background = "red";
+        miCuadro.value = "Escriba aqui...";
+        miCuadro.style.color = "white";
+
+        //Acceso a los metodos
+        miBoton2.focus();
+        
+    </script>
+
+    </body>
+</html>
